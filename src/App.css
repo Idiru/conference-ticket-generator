@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+body {
+  background-image: url(/public/background.png);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: var(--colors-neutral-0, #fff);
+  text-align: center;
+  font-family: 'Inconsolata';
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 110%; /* 33px */
+  letter-spacing: -1px;
+}
