@@ -1,19 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+
+*, *::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
-  background-image: url(/public/background.png);
+  background-image: url(/public/background-mobile.png);
+  background-size: cover;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
+.container {
+  padding: 20px 20px 114px 20px;
+}
+
 h1 {
   color: var(--colors-neutral-0, #fff);
   text-align: center;
-  font-family: 'Inconsolata';
+  font-family: "Inconsolata";
   font-size: 30px;
   font-style: normal;
   font-weight: 800;
   line-height: 110%; /* 33px */
   letter-spacing: -1px;
+  padding-bottom: 20px;
+}
+
+p {
+  color: var(--colors-neutral-300, #d1d0d5);
+  text-align: center;
+  font-family: Inconsolata;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.5px;
+}
+
+.disclaimer {
+  color: var(--colors-neutral-300, #d1d0d5);
+  font-family: Inconsolata;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 14.4px */
+  letter-spacing: -0.2px;
+  display: flex;
+  gap: 12px;
+}
+
+label {
+  color: var(--colors-neutral-0, #fff);
+  font-family: Inconsolata;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.5px;
+}
+
+input {
+  border-radius: var(--corner-radius-12, 12px);
+  border: 1px solid var(--colors-neutral-500, #8784a5);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(2.5px);
+  padding: 16px;
+  width: 100%;
+  margin-top: 12px;
+}
+
+button {
+  border-radius: var(--corner-radius-12, 12px);
+  background: var(--colors-orange-500, #f57463);
+  width: 100%;
+  padding: 16px 24px;
+  color: var(--colors-neutral-900, #0d082d);
+  text-align: center;
+  font-family: Inconsolata;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%; /* 20px */
+  letter-spacing: -0.3px;
+}
+
+button:focus {
+  border-radius: var(--corner-radius-12, 12px);
+  background: var(--colors-orange-500, #f57463);
+  box-shadow: 0px 0px 0px 3px var(--colors-base-black, #0d082d),
+    0px 0px 0px 4px var(--colors-base-white, #fff);
+}
+
+button:hover {
+  border-radius: var(--corner-radius-12, 12px);
+  background: var(--colors-orange-700, #e1604f);
+  box-shadow: 0px 4px 0px 0px var(--colors-orange-500, #f57463);
+}
+
+::placeholder {
+  color: var(--colors-neutral-300, #d1d0d5);
+  font-family: Inconsolata;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 21.6px */
+}
+
+.container-content {
+  padding-bottom: 40px;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.upload-area {
+  border-radius: var(--corner-radius-12, 12px);
+  border: 1px dashed var(--colors-neutral-500, #8784a5);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(2.5px);
+  margin-top: 16px;
+  padding: 12px;
+  margin: 12px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.upload-text {
+  font-size: 16px;
+}
+
+
+@media (min-width: 768px) {
+
+  body {
+    background-image: url(/public/background-tablet.png);
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  .container-form {
+    padding: 0 124px;
+    max-width: 700px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  
+  body {
+    background-image: url(/public/background-desktop.jpg);
+    padding: 0 274px;
+  }
+
+  .container {
+    padding-bottom: 134px;
+  }
 }
