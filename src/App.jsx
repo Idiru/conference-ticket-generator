@@ -1,8 +1,28 @@
+import {useState} from 'react'
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import "./components/Navbar/Navbar.css";
 
+
 function App() {
+
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    github: '',
+  })
+
+  const handleChange = (e) => {
+    const {name, value} = e.target
+    setForm((prevForm) => ({
+      ...prevForm,
+      [name]:value,      
+     }))    
+  console.log(form);
+  }
+
+
+
   return (
     <>
       <Navbar />
@@ -12,7 +32,9 @@ function App() {
           <p>Secure your spot at next year’s biggest coding conference.</p>
         </div>
         <div className="container-form">
-          <div className="container-upload">
+        <form action="">
+
+        <div className="container-upload">
             <label htmlFor="">Upload Avatar</label>
             <div className="upload-area">
               <img src="/public/upload-icon.svg" alt="upload-icon" />
@@ -25,19 +47,20 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="container-input-fullname">
+          <div className="container-input-name">
             <label htmlFor="">Full Name</label><br />
-            <input type="text" />
+            <input type="text" placeholder="John Doe" name='name' value={form.name} onChange={handleChange}/>
           </div>
           <div className="container-input-email">
             <label htmlFor="">Email Address</label><br />
-            <input type="email" placeholder="example@email.com" />
+            <input type="email" placeholder="example@email.com" name='email' value={form.email} onChange={handleChange} />
           </div>
           <div className="container-input-github">
             <label htmlFor="">GitHub Username</label><br />
-            <input type="text" placeholder="@yourusername" />
+            <input type="text" placeholder="@yourusername" name='github' value={form.github} onChange={handleChange} />
           </div>
           <button type="submit">Generate My Ticket</button>
+        </form>
         </div>
       </div>
     </>

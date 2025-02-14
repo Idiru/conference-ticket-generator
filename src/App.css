@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
 
-*, *::before,
+*,
+*::before,
 *::after {
   padding: 0;
   margin: 0;
@@ -52,6 +53,7 @@ p {
   letter-spacing: -0.2px;
   display: flex;
   gap: 12px;
+  padding-bottom: 24px;
 }
 
 label {
@@ -71,11 +73,18 @@ input {
   backdrop-filter: blur(2.5px);
   padding: 16px;
   width: 100%;
-  margin-top: 12px;
+  margin: 12px 0 24px 0;
+  color: var(--colors-neutral-0, #fff);
+  font-family: Inconsolata;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 21.6px */
 }
 
 button {
   border-radius: var(--corner-radius-12, 12px);
+  border: none;
   background: var(--colors-orange-500, #f57463);
   width: 100%;
   padding: 16px 24px;
@@ -90,16 +99,18 @@ button {
 }
 
 button:focus {
-  border-radius: var(--corner-radius-12, 12px);
   background: var(--colors-orange-500, #f57463);
   box-shadow: 0px 0px 0px 3px var(--colors-base-black, #0d082d),
     0px 0px 0px 4px var(--colors-base-white, #fff);
+  border: none !important;
+  outline: 2px solid var(--colors-orange-500, #f57463);
 }
 
 button:hover {
   border-radius: var(--corner-radius-12, 12px);
   background: var(--colors-orange-700, #e1604f);
   box-shadow: 0px 4px 0px 0px var(--colors-orange-500, #f57463);
+  border: none;
 }
 
 ::placeholder {
@@ -140,9 +151,7 @@ button:hover {
   font-size: 16px;
 }
 
-
 @media (min-width: 768px) {
-
   body {
     background-image: url(/public/background-tablet.png);
   }
@@ -163,7 +172,6 @@ button:hover {
 }
 
 @media (min-width: 1280px) {
-  
   body {
     background-image: url(/public/background-desktop.jpg);
     padding: 0 274px;
