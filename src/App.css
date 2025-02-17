@@ -56,6 +56,16 @@ p {
   padding-bottom: 24px;
 }
 
+
+.error {
+  color: #F57463;
+}
+
+.error-space {
+  margin-bottom: 12px;
+  border-color: #F57463;
+}
+
 label {
   color: var(--colors-neutral-0, #fff);
   font-family: Inconsolata;
@@ -150,6 +160,7 @@ button:hover {
 .upload-text {
   font-size: 16px;
 }
+
 
 @media (min-width: 768px) {
   body {

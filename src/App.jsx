@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import "./components/Navbar/Navbar.css";
@@ -12,6 +12,8 @@ function App() {
     github: '',
   })
 
+  const [error, setError] = useState(false)
+
   const handleChange = (e) => {
     const {name, value} = e.target
     setForm((prevForm) => ({
@@ -21,7 +23,13 @@ function App() {
   console.log(form);
   }
 
+  useEffect(() => {
+    errorhandler()
+  }, [form.email])
 
+  const errorhandler = () => {
+    form.email.length !== 0 && !form.email.includes("@") ? setError(true) : setError(false)
+  }
 
   return (
     <>
@@ -33,28 +41,22 @@ function App() {
         </div>
         <div className="container-form">
         <form action="">
-
-        <div className="container-upload">
-            <label htmlFor="">Upload Avatar</label>
-            <div className="upload-area">
-              <img src="/public/upload-icon.svg" alt="upload-icon" />
-              <p className="upload-text">Drag and drop or click to upload</p>
-            </div>
-            <div className="container-disclaimer">
-              <p className="disclaimer">
-                <img src="/public/info-icon.svg" alt="info-icon" />
-                Upload your photo (JPG or PNG, max size: 500KB).
-              </p>
-            </div>
-          </div>
+        
           <div className="container-input-name">
             <label htmlFor="">Full Name</label><br />
             <input type="text" placeholder="John Doe" name='name' value={form.name} onChange={handleChange}/>
           </div>
           <div className="container-input-email">
             <label htmlFor="">Email Address</label><br />
-            <input type="email" placeholder="example@email.com" name='email' value={form.email} onChange={handleChange} />
-          </div>
+            <input className={error ? "error-space" : null} type="email" placeholder="example@email.com" name='email' value={form.email} onChange={handleChange} />
+          </div>{ error ?
+            <div className="container-disclaimer">
+              <p className="disclaimer error">
+                <img src="/public/info-icon-red.svg" alt="info-icon" />
+                Please enter a valid email address.
+              </p>
+            </div>
+          : null}
           <div className="container-input-github">
             <label htmlFor="">GitHub Username</label><br />
             <input type="text" placeholder="@yourusername" name='github' value={form.github} onChange={handleChange} />
