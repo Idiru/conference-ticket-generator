@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import Navbar from "./components/Navbar/Navbar";
+import ImageUpload from './components/ImageUpload';
 import "./App.css";
 import "./components/Navbar/Navbar.css";
 
@@ -41,7 +42,7 @@ function App() {
         </div>
         <div className="container-form">
         <form action="">
-        
+        <ImageUpload/>
           <div className="container-input-name">
             <label htmlFor="">Full Name</label><br />
             <input type="text" placeholder="John Doe" name='name' value={form.name} onChange={handleChange}/>

@@ -56,14 +56,13 @@ p {
   padding-bottom: 24px;
 }
 
-
 .error {
-  color: #F57463;
+  color: #f57463;
 }
 
 .error-space {
   margin-bottom: 12px;
-  border-color: #F57463;
+  border-color: #f57463;
 }
 
 label {
@@ -157,10 +156,72 @@ button:hover {
   gap: 12px;
 }
 
+.upload-area-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .upload-text {
   font-size: 16px;
 }
 
+.uploaded-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.uploaded-image {
+  border-radius: var(--spacing-150, 12px);
+  border: 1px solid var(--colors-neutral-500, #8784a5);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 2px 4px -2px #040128;
+  backdrop-filter: blur(12px);
+  width: 50px;
+  height: 50px;
+}
+
+.uploaded-container-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.upload-button {
+  border-radius: var(--corner-radius-4, 4px);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--colors-neutral-300, #d1d0d5);
+  text-align: center;
+  font-family: "Inconsolata";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 14.4px */
+  letter-spacing: -0.2px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  padding: 4px 8px;
+}
+
+.upload-button:hover {
+  border-radius: none;
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+button:focus {
+  background: none;
+  box-shadow: none;
+  border: none !important;
+  outline: none;
+}
 
 @media (min-width: 768px) {
   body {
