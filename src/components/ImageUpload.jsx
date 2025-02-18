@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function ImageUpload() {
   const [imgSrc, setImgSrc] = useState(
@@ -34,6 +34,7 @@ export default function ImageUpload() {
     localStorage.removeItem("uploadedImage", imgSrc);
     setError(false);
   };
+
 
   return (
     <div className="container-upload">

@@ -122,6 +122,12 @@ button:hover {
   border: none;
 }
 
+button:disabled {
+  background-color: grey;
+  color: darkgrey;
+  cursor: not-allowed;
+}
+
 ::placeholder {
   color: var(--colors-neutral-300, #d1d0d5);
   font-family: Inconsolata;
@@ -221,6 +227,23 @@ button:focus {
   box-shadow: none;
   border: none !important;
   outline: none;
+}
+
+.red-font-name {
+  /* Définir la couleur de fond comme un dégradé */
+  background: linear-gradient(90deg, var(--colors-orange-500, #F57463) 0%, var(--colors-base-white, #FFF) 100%);
+
+  /* Limiter le fond au texte */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Rendre le texte transparent pour que le dégradé soit visible */
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.red-font {
+  color: #F57463;
 }
 
 @media (min-width: 768px) {
