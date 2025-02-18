@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
+import Ticket from "./components/Ticket";
 import ImageUpload from "./components/ImageUpload";
 import "./App.css";
 import "./components/Navbar/Navbar.css";
@@ -121,7 +122,7 @@ function App() {
           </form>
         </div>
         :
-        null
+        <Ticket/>
         }
       </div>
     </>

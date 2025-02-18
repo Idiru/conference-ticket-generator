@@ -18,6 +18,9 @@ body {
 
 .container {
   padding: 20px 20px 114px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
@@ -231,7 +234,11 @@ button:focus {
 
 .red-font-name {
   /* Définir la couleur de fond comme un dégradé */
-  background: linear-gradient(90deg, var(--colors-orange-500, #F57463) 0%, var(--colors-base-white, #FFF) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--colors-orange-500, #f57463) 0%,
+    var(--colors-base-white, #fff) 100%
+  );
 
   /* Limiter le fond au texte */
   -webkit-background-clip: text;
@@ -243,7 +250,88 @@ button:focus {
 }
 
 .red-font {
-  color: #F57463;
+  color: #f57463;
+}
+
+.container-ticket {
+  background-image: url(/public/ticket-bg.png);
+  background-size: cover;
+  width: 343px;
+  height: 160px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-ticket-details {
+  display: flex;
+  gap: 20px;
+  margin: 16px;
+}
+
+.container-ticket-details-text p {
+  text-align: left;
+}
+
+.title-ticket {
+  color: var(--colors-neutral-0, #fff);
+  font-family: Inconsolata;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 26.4px */
+  letter-spacing: -1px;
+}
+
+.subtitle-ticket {
+  color: var(--colors-neutral-300, #d1d0d5);
+  text-align: right;
+  font-family: Inconsolata;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
+}
+
+.container-ticket-content {
+  display: flex;
+  gap: 12px;
+  margin: 16px;
+}
+
+.container-ticket-content-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-ticket-content-text p {
+  text-align: left;
+}
+
+.title-name-ticket {
+  color: var(--colors-neutral-0, #fff);
+  font-family: Inconsolata;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 22px */
+  letter-spacing: -1px;
+}
+
+.container-ticket-content-git {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.container-ticket-content-git p {
+  color: var(--colors-neutral-300, #d1d0d5);
+  font-family: Inconsolata;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
 }
 
 @media (min-width: 768px) {
