@@ -53,7 +53,7 @@ export default function ImageUpload() {
         />
         {!imgSrc ? (
           <div className="upload-area-empty">
-            <img src="/public/upload-icon.svg" alt="upload-icon" />
+            <img src="/upload-icon.svg" alt="upload-icon" />
             <p className="upload-text">Drag and drop or click to upload</p>
           </div>
         ) : (
@@ -87,12 +87,12 @@ export default function ImageUpload() {
       <div className="container-disclaimer">
         {error ? (
           <p className="disclaimer error">
-            <img src="/public/info-icon-red.svg" alt="info-icon" />
+            <img src="/info-icon-red.svg" alt="info-icon" />
             File too large. Please upload a photo under 5MB.
           </p>
         ) : (
           <p className="disclaimer">
-            <img src="/public/info-icon.svg" alt="info-icon" />
+            <img src="/info-icon.svg" alt="info-icon" />
             Upload your photo (JPG or PNG, max size: 5MB).
           </p>
         )}
