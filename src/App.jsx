@@ -107,7 +107,7 @@ function App() {
               {error ? (
                 <div className="container-disclaimer">
                   <p className="disclaimer error">
-                    <img src="/public/info-icon-red.svg" alt="info-icon" />
+                    <img src="/info-icon-red.svg" alt="info-icon" />
                     Please enter a valid email address.
                   </p>
                 </div>
