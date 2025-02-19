@@ -24,7 +24,6 @@ export default function ImageUpload() {
           setError(false);
         };
         reader.readAsDataURL(file);
-        console.log(imgSrc);
       }
     }
   };

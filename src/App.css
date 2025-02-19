@@ -125,6 +125,11 @@ button:hover {
   border: none;
 }
 
+button:disabled:hover {
+
+  box-shadow: none;
+}
+
 button:disabled {
   background-color: grey;
   color: darkgrey;
@@ -349,8 +354,49 @@ button:focus {
 
   .container-form {
     padding: 0 124px;
-    max-width: 700px;
+    min-width: 100%;
     margin: auto;
+  }
+
+  .container-ticket {
+    width: 600px;
+    height: 280px;
+    justify-content: center; 
+    gap: 74px;
+  }
+
+  .container-ticket-details {
+    margin: 0 24px;
+  }
+
+  .title-ticket {
+    font-size: 40px;
+  }
+
+  .subtitle-ticket {
+    font-size: 18px;
+  }
+
+  .container-ticket-content {
+    margin: 0 24px;
+  }
+
+  .title-name-ticket {
+    font-size: 30px;
+  }
+
+  .uploaded-image {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .container-ticket-content-text {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .container-ticket-content-git p {
+    font-size: 20px;
   }
 }
 
@@ -363,4 +409,5 @@ button:focus {
   .container {
     padding-bottom: 134px;
   }
+
 }
