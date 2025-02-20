@@ -1,12 +1,12 @@
 # conference-ticket-generator
+## Project Overview
+The Conference Ticket Generator is a web application built with React that allows users to generate personalized conference tickets. Users can input their details, upload an avatar, and generate a ticket. The goal of this project was to practice. 
 
 ## How to install 
 1. Clone the repository: `git clone https://github.com/Idiru/conference-ticket-generator.git`
 2. Install dependencies: `npm i`
 3. Run the projet: `npm run dev`
 
-## Project Overview
-The Conference Ticket Generator is a web application built with React that allows users to generate personalized conference tickets. Users can input their details, upload an avatar, and generate a ticket. The goal of the project was to practice. 
 
 ## How to Use
 1. Open the application in your browser.
