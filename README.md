@@ -2,7 +2,7 @@
 
 ## How to install 
 1. Clone the repository: `git clone https://github.com/Idiru/conference-ticket-generator.git`
-2. Install dependancies: `npm i`
+2. Install dependencies: `npm i`
 3. Run the projet: `npm run dev`
 
 ## Project Overview
